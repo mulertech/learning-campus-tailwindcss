@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-<a href="#contenu">Aller au contenu</a>
+<a href="#contenu" class="sr-only">Aller au contenu</a>
 
 <!-- Header -->
 <header class="bg-white shadow fixed w-full z-10">
@@ -26,17 +26,17 @@
     </div>
 </header>
 
-<main id="contenu">
+<main id="contenu" class="pt-20">
     <!-- Hero -->
-    <section id="accueil">
-        <div>
-            <h1>Salut, je suis Jean</h1>
-            <p>Développeur Frontend passionné par le design et la performance.</p>
-            <div>
-                <a href="#projets">Voir mes projets</a>
-                <a href="#contact">Me contacter</a>
+    <section id="accueil" class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-20">
+        <div class="container mx-auto text-center px-4">
+            <h1 class="text-4xl font-bold mb-4">Salut, je suis Jean</h1>
+            <p class="text-lg mb-6">Développeur Frontend passionné par le design et la performance.</p>
+            <div class="flex justify-center gap-4">
+                <a href="#projets" class="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow">Voir mes projets</a>
+                <a href="#contact" class="border border-white px-6 py-3 rounded-lg">Me contacter</a>
             </div>
-            <img src="https://picsum.photos/id/177/200/300" alt="Photo de profil" />
+            <img src="https://picsum.photos/id/177/200/300" alt="Photo de profil" class="mt-10 mx-auto rounded-full shadow-lg w-48 h-48 object-cover" />
         </div>
     </section>
 
