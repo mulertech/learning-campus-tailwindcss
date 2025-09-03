@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mon Portfolio</title>
     <meta name="description" content="Portfolio personnel." />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
 <a href="#contenu">Aller au contenu</a>
 
 <!-- Header -->
-<header>
-    <div>
-        <div>MonPortfolio</div>
+<header class="bg-white shadow fixed w-full z-10">
+    <div class="container mx-auto flex justify-between items-center p-4">
+        <div class="text-2xl font-bold text-indigo-600">MonPortfolio</div>
         <nav>
             <button id="btn-menu" aria-expanded="false" aria-controls="menu">☰</button>
-            <ul id="menu">
+            <ul id="menu" class="flex gap-6 text-gray-700 font-medium">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#projets">Projets</a></li>
                 <li><a href="#competences">Compétences</a></li>
