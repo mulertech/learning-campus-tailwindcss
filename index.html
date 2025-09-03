@@ -1,52 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apache HTML Docker Environment</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        .container {
-            background: rgba(255,255,255,0.1);
-            padding: 40px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        h1 { margin-bottom: 30px; }
-        .commands {
-            background: rgba(0,0,0,0.2);
-            padding: 20px;
-            border-radius: 5px;
-            margin: 20px 0;
-            text-align: left;
-        }
-        code {
-            background: rgba(255,255,255,0.2);
-            padding: 2px 6px;
-            border-radius: 3px;
-        }
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mon Portfolio</title>
+    <meta name="description" content="Portfolio personnel." />
 </head>
 <body>
-    <div class="container">
-        <h1>🚀 Apache HTML Environment Ready!</h1>
-        <p>Your Apache server is running and serving HTML/CSS files.</p>
-        
-        <div class="commands">
-            <h3>📋 Quick Commands:</h3>
-            <p><strong>Start:</strong> <code>docker compose up -d</code></p>
-            <p><strong>Stop:</strong> <code>docker compose down</code></p>
-            <p><strong>Logs:</strong> <code>docker compose logs -f</code></p>
-        </div>
-        
-        <p>Edit this <code>index.html</code> file to get started!</p>
+<a href="#contenu">Aller au contenu</a>
+
+<!-- Header -->
+<header>
+    <div>
+        <div>MonPortfolio</div>
+        <nav>
+            <button id="btn-menu" aria-expanded="false" aria-controls="menu">☰</button>
+            <ul id="menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </div>
+</header>
+
+<main id="contenu">
+    <!-- Hero -->
+    <section id="accueil">
+        <div>
+            <h1>Salut, je suis Jean</h1>
+            <p>Développeur Frontend passionné par le design et la performance.</p>
+            <div>
+                <a href="#projets">Voir mes projets</a>
+                <a href="#contact">Me contacter</a>
+            </div>
+            <img src="https://picsum.photos/id/177/200/300" alt="Photo de profil" />
+        </div>
+    </section>
+
+    <!-- Compétences -->
+    <section id="competences">
+        <div>
+            <h2>Mes Compétences</h2>
+            <div>
+                <div>
+                    <h3>HTML & CSS</h3>
+                    <p>Création de sites web responsives et optimisés.</p>
+                </div>
+                <div>
+                    <h3>JavaScript & React</h3>
+                    <p>Applications web dynamiques et performantes.</p>
+                </div>
+                <div>
+                    <h3>Tailwind CSS</h3>
+                    <p>Design moderne et rapide avec classes utilitaires.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projets">
+        <div>
+            <h2>Mes Projets</h2>
+            <div>
+                <article>
+                    <img src="https://picsum.photos/400/250?random=1" alt="Projet 1" />
+                    <h3>Portfolio React</h3>
+                </article>
+                <article>
+                    <img src="https://picsum.photos/400/250?random=2" alt="Projet 2" />
+                    <h3>E-commerce Tailwind</h3>
+                </article>
+                <article>
+                    <img src="https://picsum.photos/400/250?random=3" alt="Projet 3" />
+                    <h3>Blog Next.js</h3>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div>
+            <h2>Contact</h2>
+            <form action="#" method="post">
+                <div>
+                    <label for="nom">Nom</label>
+                    <input id="nom" name="nom" type="text" required />
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required />
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Mon Portfolio. Tous droits réservés.</p>
+    <ul>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">GitHub</a></li>
+    </ul>
+</footer>
+
+<script>
+    const btnMenu = document.getElementById('btn-menu');
+    const menu = document.getElementById('menu');
+    btnMenu.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
 </body>
 </html>
